@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonam 💙 I Have a Question For You</title>
+    <meta name="description" content="A special question just for you">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating hearts background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- ===== QUESTION SCREEN ===== -->
+    <div class="screen question-screen" id="questionScreen">
+        <div class="sparkle-container" id="sparkles"></div>
+
+        <div class="content-wrapper">
+            <!-- Cute Bear -->
+            <div class="bear-container" id="bearContainer">
+                <div class="bear">
+                    <!-- Ears -->
+                    <div class="bear-ear bear-ear-left">
+                        <div class="bear-ear-inner"></div>
+                    </div>
+                    <div class="bear-ear bear-ear-right">
+                        <div class="bear-ear-inner"></div>
+                    </div>
+                    <!-- Face -->
+                    <div class="bear-face">
+                        <!-- Blush -->
+                        <div class="bear-blush bear-blush-left"></div>
+                        <div class="bear-blush bear-blush-right"></div>
+                        <!-- Eyes -->
+                        <div class="bear-eye bear-eye-left" id="bearEyeLeft">
+                            <div class="bear-pupil"></div>
+                            <div class="bear-eye-shine"></div>
+                        </div>
+                        <div class="bear-eye bear-eye-right" id="bearEyeRight">
+                            <div class="bear-pupil"></div>
+                            <div class="bear-eye-shine"></div>
+                        </div>
+                        <!-- Nose -->
+                        <div class="bear-nose"></div>
+                        <!-- Mouth -->
+                        <div class="bear-mouth" id="bearMouth">
+                            <div class="bear-smile" id="bearSmile"></div>
+                        </div>
+                        <!-- Tears (hidden by default) -->
+                        <div class="bear-tear bear-tear-left" id="tearLeft"></div>
+                        <div class="bear-tear bear-tear-right" id="tearRight"></div>
+                    </div>
+                    <!-- Body -->
+                    <div class="bear-body">
+                        <div class="bear-belly"></div>
+                        <!-- Heart the bear is holding -->
+                        <div class="bear-heart" id="bearHeart">❤️</div>
+                        <!-- Arms -->
+                        <div class="bear-arm bear-arm-left"></div>
+                        <div class="bear-arm bear-arm-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Text -->
+            <h1 class="question-text" id="questionText">
+                Sonam, will you go on a date with me? 💙🥺
+            </h1>
+            <p class="sub-text" id="subText">Please say yes, Sonam... 💙</p>
+
+            <!-- Buttons -->
+            <div class="buttons-container" id="buttonsContainer">
+                <button class="btn btn-yes" id="btnYes" onclick="handleYes()">
+                    Yes! 💙
+                </button>
+                <button class="btn btn-no" id="btnNo" onclick="handleNo()">
+                    No 😢
+                </button>
+            </div>
+
+            <!-- No count message -->
+            <p class="no-count-msg" id="noCountMsg"></p>
+        </div>
+    </div>
+
+    <!-- ===== CELEBRATION SCREEN ===== -->
+    <div class="screen celebration-screen hidden" id="celebrationScreen">
+        <div class="hearts-rain" id="heartsRain"></div>
+
+        <div class="celebration-content">
+            <div class="celebration-glow"></div>
+
+            <h1 class="celebration-title" id="celebrationTitle">
+                Yayyy Sonam! 🎉💙
+            </h1>
+
+            <div class="celebration-image-wrapper">
+                <div class="image-frame">
+                    <img src="ankit.jpg" alt="Us together" class="celebration-image" id="celebrationImage">
+                </div>
+                <div class="image-sparkles"></div>
+            </div>
+
+            <p class="celebration-message" id="celebrationMessage">
+                Sonam, I can't wait for our date! 💙<br>
+            </p>
+
+            <div class="celebration-hearts-row">
+                <span>💙</span><span>🩵</span><span>💙</span><span>🩵</span><span>💙</span><span>🩵</span><span>💙</span>
+            </div>
+
+            <p class="date-text">
+                It's a date then, Sonam! 🌹💙✨
+            </p>
+
+            <!-- Quick WhatsApp confirmation button -->
+            <a href="https://api.whatsapp.com/send/?phone=917086826509&text=Hina%20mayalu%20jaam%20date%20ma%20%E2%9D%A4%EF%B8%8F"
+                target="_blank" rel="noopener noreferrer" class="notify-btn" id="whatsappBtn" onclick="openWhatsApp(event)">
+                <span class="notify-icon">💬</span> Send message to Ankit 💙
+            </a>
+        </div>
+    </div>
+
+    <!-- Background Audio Elements (Plays only after Yes is clicked) -->
+    <audio id="bgMusic" loop preload="none">
+        <source src="sonam.mpeg" type="audio/mpeg">
+        <source src="sonam.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Control Button -->
+    <button class="music-toggle hidden" id="musicToggle" aria-label="Toggle music" title="Toggle Music">
+        <span id="musicIcon">🎵</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
